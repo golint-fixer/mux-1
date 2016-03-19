@@ -16,6 +16,6 @@ func TestMuxSimple(t *testing.T) {
 	wrt := utils.NewWriterStub()
 	req := newRequest()
 
-	mx.Middleware.Run("request", wrt, req, nil)
+	mx.Layer.Run("request", wrt, req, nil)
 	st.Expect(t, wrt.Header().Get("foo"), "bar")
 }

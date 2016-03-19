@@ -15,7 +15,7 @@ func TestMethod(t *testing.T) {
 	wrt := utils.NewWriterStub()
 	req := newRequest()
 
-	mx.Middleware.Run("request", wrt, req, nil)
+	mx.Layer.Run("request", wrt, req, nil)
 	st.Expect(t, wrt.Header().Get("foo"), "bar")
 }
 
@@ -42,7 +42,7 @@ func TestPath(t *testing.T) {
 		wrt := utils.NewWriterStub()
 		req := newRequest()
 		req.URL.Path = test.path
-		mx.Middleware.Run("request", wrt, req, nil)
+		mx.Layer.Run("request", wrt, req, nil)
 		match(t, wrt, test.matches)
 	}
 }
@@ -69,7 +69,7 @@ func TestHost(t *testing.T) {
 		req := newRequest()
 		req.URL, _ = url.Parse(test.url)
 		req.Host = req.URL.Host
-		mx.Middleware.Run("request", wrt, req, nil)
+		mx.Layer.Run("request", wrt, req, nil)
 		match(t, wrt, test.matches)
 	}
 }
@@ -96,7 +96,7 @@ func TestQuery(t *testing.T) {
 		wrt := utils.NewWriterStub()
 		req := newRequest()
 		req.URL, _ = url.Parse(test.url)
-		mx.Middleware.Run("request", wrt, req, nil)
+		mx.Layer.Run("request", wrt, req, nil)
 		match(t, wrt, test.matches)
 	}
 }
@@ -122,7 +122,7 @@ func TestHeader(t *testing.T) {
 		for key, value := range test.headers {
 			req.Header.Set(key, value)
 		}
-		mx.Middleware.Run("request", wrt, req, nil)
+		mx.Layer.Run("request", wrt, req, nil)
 		match(t, wrt, test.matches)
 	}
 }

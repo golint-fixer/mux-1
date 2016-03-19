@@ -19,7 +19,7 @@ func TestMuxComposeIfMatches(t *testing.T) {
 	req := newRequest()
 	req.URL.Host = "foo.com"
 
-	mx.Middleware.Run("request", wrt, req, nil)
+	mx.Layer.Run("request", wrt, req, nil)
 	st.Expect(t, wrt.Header().Get("foo"), "bar")
 }
 
@@ -34,7 +34,7 @@ func TestMuxComposeIfUnmatch(t *testing.T) {
 	req := newRequest()
 	req.URL.Host = "foo.com"
 
-	mx.Middleware.Run("request", wrt, req, nil)
+	mx.Layer.Run("request", wrt, req, nil)
 	st.Expect(t, wrt.Header().Get("foo"), "")
 }
 
@@ -49,7 +49,7 @@ func TestMuxComposeOrMatch(t *testing.T) {
 	req := newRequest()
 	req.URL.Host = "foo.com"
 
-	mx.Middleware.Run("request", wrt, req, nil)
+	mx.Layer.Run("request", wrt, req, nil)
 	st.Expect(t, wrt.Header().Get("foo"), "bar")
 }
 
@@ -64,7 +64,7 @@ func TestMuxComposeOrUnMatch(t *testing.T) {
 	req := newRequest()
 	req.URL.Host = "foo.com"
 
-	mx.Middleware.Run("request", wrt, req, nil)
+	mx.Layer.Run("request", wrt, req, nil)
 	st.Expect(t, wrt.Header().Get("foo"), "bar")
 }
 
