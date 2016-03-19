@@ -1,8 +1,8 @@
 # vinci/mux [![Build Status](https://travis-ci.org/vinci-proxy/gentleman.png)](https://travis-ci.org/vinci-proxy/gentleman) [![GoDoc](https://godoc.org/github.com/vinci-proxy/vinci/mux?status.svg)](https://godoc.org/github.com/vinci-proxy/vinci/mux) [![API](https://img.shields.io/badge/status-stable-green.svg?style=flat)](https://godoc.org/github.com/vinci-proxy/vinci/mux) [![Go Report Card](https://goreportcard.com/badge/github.com/vinci-proxy/vinci/mux)](https://goreportcard.com/report/github.com/vinci-proxy/vinci/mux)
 
-Simple, versatile, general purpose HTTP multiplexer for [vinci](https://github.com/vinci-proxy/vinci) supporting multiple HTTP matching/filtering rules and easy composition capabilities.
+Simple, versatile, general purpose HTTP multiplexer for [vinci](https://github.com/vinci-proxy/vinci) supporting multiple matching/filtering rules and easy composition capabilities.
 
-This is more a convenient solution than very effecient one. If you're looking for great performance, simply pick another solution.
+This is more a convenient solution than very efficient one. If you're looking for great performance, simply pick another solution.
 
 ## Installation
 
