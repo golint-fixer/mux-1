@@ -1,4 +1,4 @@
-# vinci/mux [![Build Status](https://travis-ci.org/vinci-proxy/gentleman.png)](https://travis-ci.org/vinci-proxy/gentleman) [![GoDoc](https://godoc.org/github.com/vinci-proxy/vinci/mux?status.svg)](https://godoc.org/github.com/vinci-proxy/vinci/mux) [![API](https://img.shields.io/badge/status-stable-green.svg?style=flat)](https://godoc.org/github.com/vinci-proxy/vinci/mux) [![Go Report Card](https://goreportcard.com/badge/github.com/vinci-proxy/vinci/mux)](https://goreportcard.com/report/github.com/vinci-proxy/vinci/mux)
+# mux [![Build Status](https://travis-ci.org/vinci-proxy/mux.png)](https://travis-ci.org/vinci-proxy/mux) [![GoDoc](https://godoc.org/github.com/vinci-proxy/mux?status.svg)](https://godoc.org/github.com/vinci-proxy/mux) [![API](https://img.shields.io/badge/status-stable-green.svg?style=flat)](https://godoc.org/github.com/vinci-proxy/mux) [![Go Report Card](https://goreportcard.com/badge/github.com/vinci-proxy/mux)](https://goreportcard.com/report/github.com/vinci-proxy/mux)
 
 Simple, versatile, general purpose HTTP multiplexer for [vinci](https://github.com/vinci-proxy/vinci) supporting multiple matching/filtering rules and easy composition capabilities.
 
@@ -7,7 +7,7 @@ This is more a convenient solution than very efficient one. If you're looking fo
 ## Installation
 
 ```bash
-go get -u gopkg.in/vinci-proxy/vinci.v0/mux
+go get -u gopkg.in/vinci-proxy/mux.v0
 ```
 
 ## API
