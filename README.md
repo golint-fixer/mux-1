@@ -143,4 +143,4 @@ func main() {
 
 ## License
 
-MIT - Tomas Aparicio
+MIT
