@@ -59,7 +59,7 @@ func (m *Mux) Some(matchers ...Matcher) *Mux {
 
 // Use registers a new plugin in the middleware stack.
 func (m *Mux) Use(handler interface{}) *Mux {
-	m.Layer.Use(handler)
+	m.Layer.Use(layer.RequestPhase, handler)
 	return m
 }
 
