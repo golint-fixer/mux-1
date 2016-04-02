@@ -2,7 +2,7 @@ package mux
 
 import (
 	"github.com/nbio/st"
-	"gopkg.in/vinci-proxy/utils.v0"
+	"gopkg.in/vinxi/utils.v0"
 	"net/http"
 	"net/url"
 	"testing"

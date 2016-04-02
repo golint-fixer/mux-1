@@ -2,8 +2,8 @@ package mux
 
 import (
 	"github.com/nbio/st"
-	"gopkg.in/vinci-proxy/utils.v0"
 	"net/http"
+	"net/http/httptest"
 	"testing"
 )
 
@@ -13,7 +13,8 @@ func TestMuxSimple(t *testing.T) {
 		w.Header().Set("foo", "bar")
 		h.ServeHTTP(w, r)
 	})
-	wrt := utils.NewWriterStub()
+
+	wrt := httptest.NewRecorder()
 	req := newRequest()
 
 	mx.Layer.Run("request", wrt, req, nil)

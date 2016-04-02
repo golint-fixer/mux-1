@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"gopkg.in/vinci-proxy/mux.v0"
-	"gopkg.in/vinci-proxy/vinci.v0"
+	"gopkg.in/vinxi/mux.v0"
+	"gopkg.in/vinxi/vinxi.v0"
 	"net/http"
 )
 
 func main() {
-	vs := vinci.NewServer(vinci.ServerOptions{Host: "localhost", Port: 3100})
+	vs := vinxi.NewServer(vinxi.ServerOptions{Host: "localhost", Port: 3100})
 
 	// Create a custom multiplexer for /ip path
 	ip := mux.If(mux.Path("^/ip"))
@@ -28,7 +28,7 @@ func main() {
 	m.Use(ip)
 	m.Use(headers)
 
-	// Register the multiplexer in the vinci
+	// Register the multiplexer in the vinxi
 	vs.Use(m)
 	vs.Forward("http://httpbin.org")
 

@@ -3,7 +3,7 @@
 package mux
 
 import (
-	"gopkg.in/vinci-proxy/layer.v0"
+	"gopkg.in/vinxi/layer.v0"
 	"net/http"
 )
 

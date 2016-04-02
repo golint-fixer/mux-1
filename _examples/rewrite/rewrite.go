@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"gopkg.in/vinci-proxy/mux.v0"
-	"gopkg.in/vinci-proxy/vinci.v0"
+	"gopkg.in/vinxi/mux.v0"
+	"gopkg.in/vinxi/vinxi.v0"
 	"net/http"
 )
 
 func main() {
-	vs := vinci.NewServer(vinci.ServerOptions{Host: "localhost", Port: 3100})
+	vs := vinxi.NewServer(vinxi.ServerOptions{Host: "localhost", Port: 3100})
 
 	m := mux.New()
 	m.If(mux.MatchMethod("GET"), mux.MatchPath("^/ip"))

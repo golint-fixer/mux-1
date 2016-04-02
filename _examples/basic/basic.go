@@ -2,19 +2,19 @@ package main
 
 import (
 	"fmt"
-	"gopkg.in/vinci-proxy/mux.v0"
-	"gopkg.in/vinci-proxy/vinci.v0"
+	"gopkg.in/vinxi/mux.v0"
+	"gopkg.in/vinxi/vinxi.v0"
 	"net/http"
 )
 
 func main() {
-	vs := vinci.NewServer(vinci.ServerOptions{Host: "localhost", Port: 3100})
+	vs := vinxi.NewServer(vinxi.ServerOptions{Host: "localhost", Port: 3100})
 
 	m := mux.New()
 	m.If(mux.MatchMethod("GET", "POST"), mux.MatchPath("^/foo"))
 
 	m.Use(func(w http.ResponseWriter, r *http.Request, h http.Handler) {
-		w.Header().Set("Server", "vinci")
+		w.Header().Set("Server", "vinxi")
 		h.ServeHTTP(w, r)
 	})
 
